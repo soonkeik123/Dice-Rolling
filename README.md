@@ -1,16 +1,13 @@
 # dice_rolling
 
-A new Flutter project.
+Welcome to the Dice Rolling App repository! This project is a learning outcome in learning and implementing a dice rolling application using Flutter. The app features engaging sound effects and smooth animations to simulate the rolling of dice, providing a fun and interactive user experience, while revising the Flutter.
 
-## Getting Started
+# Improvement
 
-This project is a starting point for a Flutter application.
+I am planning to add the feature that letting the user to manage the amount of the dice. I believe that will make this app more useful.
 
-A few resources to get you started if this is your first Flutter project:
+## Disclaimer 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This project is created as part of a learning journey and references tutorials and guidance from YouTube. It is intended for educational purposes and to help others learn how to implement similar features in Flutter.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Feel free to explore the code, experiment with the it :)
