@@ -50,6 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   int counter = 1; // Counting the time of dice changed
 
+  int diceNumberValue = 1; // The number of the dice
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,6 +72,15 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(
               height: 60,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _NumberField(),
+              ],
+            ),
+            const SizedBox(
+              height: 50,
             ),
             ElevatedButton(
                 onPressed: () async {
@@ -106,5 +117,52 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
     );
+  }
+
+  @override
+  Widget _NumberField() {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        const Text('Dice Number', style: TextStyle(fontSize: 20)),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            IconButton(
+              icon: Icon(Icons.arrow_left),
+              iconSize: 45,
+              onPressed: _decrementValue,
+            ),
+            Text(
+              '$diceNumberValue',
+              style: TextStyle(fontSize: 28),
+            ),
+            IconButton(
+              icon: Icon(Icons.arrow_right),
+              iconSize: 45,
+              onPressed: _incrementValue,
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  void _incrementValue() {
+    setState(() {
+      if (diceNumberValue < 9) {
+        diceNumberValue++;
+      }
+    });
+  }
+
+  void _decrementValue() {
+    setState(() {
+      if (diceNumberValue > 1) {
+        diceNumberValue--;
+      }
+    });
   }
 }
